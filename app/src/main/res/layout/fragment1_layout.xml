@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
+        android:elevation="56dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="60dp"
+        app:cardMaxElevation="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="20dp"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:paddingBottom="18dp">
+
+
+            <TextView
+                android:id="@+id/gameId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Game ID :"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="#662424"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/gameIdTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:text="3652728"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/gameId"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/infomationImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:onClick="infoClick"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.921"
+                app:layout_constraintStart_toEndOf="@+id/gameIdTextView"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_info_outline_black_24dp"
+                tools:ignore="VectorDrawableCompat" />
+
+            <TextView
+                android:id="@+id/walletAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Wallet Ammount :"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="#2196F3"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gameId" />
+
+            <TextView
+                android:id="@+id/amountTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="24dp"
+                android:text="500 Rs."
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="#449C22"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/walletAmount"
+                app:layout_constraintTop_toBottomOf="@+id/gameIdTextView" />
+
+            <TextView
+                android:id="@+id/selectColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/select_color"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/walletAmount" />
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/greenCardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="16dp"
+                app:cardCornerRadius="25dp"
+                app:layout_constraintEnd_toStartOf="@+id/redCardView"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/voiletCardView"
+                app:layout_constraintTop_toTopOf="@+id/voiletCardView"
+
+                >
+
+                <Button
+                    android:id="@+id/greenButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_button"
+                    android:onClick="clickGreen"
+                    android:text="@string/green"
+                    android:textAllCaps="false"
+                    android:textColor="#004D40" />
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/voiletCardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="16dp"
+                app:cardCornerRadius="25dp"
+                app:layout_constraintEnd_toStartOf="@+id/greenCardView"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/selectColor"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/selectColor">
+
+                <Button
+
+                    android:id="@+id/voiletButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_button"
+                    android:onClick="clickVoilet"
+                    android:text="Voilet"
+                    android:textAllCaps="false"
+                    android:textColor="#4A148C" />
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/redCardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="16dp"
+                app:cardCornerRadius="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/greenCardView"
+                app:layout_constraintTop_toTopOf="@+id/greenCardView">
+
+
+                <Button
+                    android:id="@+id/redButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_button"
+                    android:onClick="clickRed"
+                    android:text="Red"
+                    android:textAllCaps="false"
+                    android:textColor="#B71C1C" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/selectNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/select_number"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/voiletCardView" />
+
+            <Button
+                android:id="@+id/button0"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="44dp"
+                android:background="#ffff"
+                android:text="0"
+                app:layout_constraintEnd_toStartOf="@+id/button1"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/selectNumber" />
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="44dp"
+                android:background="#ffff"
+                android:text="1"
+                app:layout_constraintEnd_toStartOf="@+id/button2"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button0"
+                app:layout_constraintTop_toTopOf="@+id/selectNumber" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="44dp"
+                android:background="#ffff"
+                android:text="2"
+                app:layout_constraintEnd_toStartOf="@+id/button3"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button1"
+                app:layout_constraintTop_toTopOf="@+id/selectNumber" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="44dp"
+                android:background="#ffff"
+                android:text="3"
+                app:layout_constraintStart_toEndOf="@+id/button2"
+                app:layout_constraintTop_toTopOf="@+id/selectNumber" />
+
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="44dp"
+                android:background="#ffff"
+                android:text="4"
+                app:layout_constraintStart_toEndOf="@+id/button3"
+                app:layout_constraintTop_toTopOf="@+id/selectNumber" />
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_marginStart="11dp"
+                android:layout_marginLeft="11dp"
+                android:layout_marginTop="44dp"
+                android:background="#ffff"
+                android:text="5"
+                app:layout_constraintStart_toEndOf="@+id/button4"
+                app:layout_constraintTop_toTopOf="@+id/selectNumber" />
+
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="44dp"
+                android:background="#ffff"
+                android:text="6"
+                app:layout_constraintEnd_toStartOf="@+id/button8"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button7"
+                app:layout_constraintTop_toTopOf="@+id/selectNumber" />
+
+
+            <Button
+                android:id="@+id/button7"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="44dp"
+                android:background="#ffff"
+                android:text="7"
+                app:layout_constraintEnd_toStartOf="@+id/button6"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button5"
+                app:layout_constraintTop_toTopOf="@+id/selectNumber" />
+
+
+            <Button
+                android:id="@+id/button8"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="44dp"
+                android:background="#ffff"
+                android:text="8"
+                app:layout_constraintEnd_toStartOf="@+id/button9"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button6"
+                app:layout_constraintTop_toTopOf="@+id/selectNumber" />
+
+            <Button
+                android:id="@+id/button9"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="44dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="#ffff"
+                android:text="9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button8"
+                app:layout_constraintTop_toTopOf="@+id/selectNumber" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="12dp"
+                android:background="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gameIdTextView" />
+
+            <TextView
+                android:id="@+id/primaryColorTextView"
+                style="@android:style/Widget.DeviceDefault.TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="30dp"
+                android:text="Primary Color:"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button1" />
+
+            <TextView
+                android:id="@+id/primaryColorValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="30dp"
+                android:text="Voilet"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@+id/primaryColorTextView"
+                app:layout_constraintTop_toBottomOf="@+id/button5" />
+
+            <TextView
+                android:id="@+id/textView5"
+                style="@android:style/Widget.DeviceDefault.TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="20dp"
+                android:text="Final Color :"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/primaryColorTextView" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/green"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@+id/textView5"
+                app:layout_constraintTop_toBottomOf="@+id/primaryColorValue" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

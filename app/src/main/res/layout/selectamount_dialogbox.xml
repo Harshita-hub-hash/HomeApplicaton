@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background1"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/amountTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:text="Amount :"
+        android:textSize="24sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toStartOf="@+id/amountValue"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+    </TextView>
+
+    <Button
+        android:id="@+id/firstButton"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:background="#ffff"
+        android:text="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/amountTextView">
+
+    </Button>
+
+    <Button
+        android:id="@+id/secondButton"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="32dp"
+        android:background="#ffff"
+        android:text="100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstButton">
+
+    </Button>
+
+    <Button
+        android:id="@+id/thirdButton"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="32dp"
+        android:background="#ffff"
+        android:text="500"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/secondButton">
+
+    </Button>
+
+    <Button
+        android:id="@+id/fourthButton"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="32dp"
+        android:background="#ffff"
+        android:text="1000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/thirdButton">
+
+    </Button>
+
+    <ImageView
+        android:id="@+id/tenMinusImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/firstButton"
+        app:layout_constraintEnd_toStartOf="@+id/firstButton"
+        app:layout_constraintTop_toTopOf="@+id/firstButton"
+        app:srcCompat="@drawable/ic_indeterminate_check_box_black_24dp"
+        tools:ignore="VectorDrawableCompat" />
+
+    <ImageView
+        android:id="@+id/hundradMinusImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/secondButton"
+        app:layout_constraintEnd_toStartOf="@+id/secondButton"
+        app:layout_constraintTop_toTopOf="@+id/secondButton"
+        app:srcCompat="@drawable/ic_indeterminate_check_box_black_24dp"
+        tools:ignore="VectorDrawableCompat" />
+
+
+    <ImageView
+        android:id="@+id/fivdHundradMinusImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/thirdButton"
+        app:layout_constraintEnd_toStartOf="@+id/thirdButton"
+        app:layout_constraintTop_toTopOf="@+id/thirdButton"
+        app:srcCompat="@drawable/ic_indeterminate_check_box_black_24dp"
+        tools:ignore="VectorDrawableCompat" />
+
+    <ImageView
+        android:id="@+id/thousandMinusImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/fourthButton"
+        app:layout_constraintEnd_toStartOf="@+id/fourthButton"
+        app:layout_constraintTop_toTopOf="@+id/fourthButton"
+        app:srcCompat="@drawable/ic_indeterminate_check_box_black_24dp"
+        tools:ignore="VectorDrawableCompat" />
+
+    <ImageView
+        android:id="@+id/tenPlusImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/firstButton"
+        app:layout_constraintStart_toEndOf="@+id/firstButton"
+        app:layout_constraintTop_toTopOf="@+id/firstButton"
+        app:srcCompat="@drawable/ic_add_box_black_24dp"
+        tools:ignore="VectorDrawableCompat" />
+
+    <ImageView
+        android:id="@+id/hundredPlusImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/secondButton"
+        app:layout_constraintStart_toEndOf="@+id/secondButton"
+        app:layout_constraintTop_toTopOf="@+id/secondButton"
+        app:srcCompat="@drawable/ic_add_box_black_24dp"
+        tools:ignore="MissingConstraints,VectorDrawableCompat" />
+
+    <ImageView
+        android:id="@+id/fiveHundredPlusImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/thirdButton"
+        app:layout_constraintStart_toEndOf="@+id/thirdButton"
+        app:layout_constraintTop_toTopOf="@+id/thirdButton"
+        app:srcCompat="@drawable/ic_add_box_black_24dp"
+        tools:ignore="VectorDrawableCompat" />
+
+    <ImageView
+        android:id="@+id/thousandPlusImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/fourthButton"
+        app:layout_constraintStart_toEndOf="@+id/fourthButton"
+        app:layout_constraintTop_toTopOf="@+id/fourthButton"
+        app:srcCompat="@drawable/ic_add_box_black_24dp"
+        tools:ignore="VectorDrawableCompat" />
+
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/custom_button1"
+        android:text="@android:string/cancel"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/okayButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fourthButton" />
+
+    <Button
+        android:id="@+id/okayButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/custom_button1"
+        android:text="okay"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="@+id/cancelButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cancelButton"
+        app:layout_constraintTop_toTopOf="@+id/cancelButton" />
+
+    <TextView
+        android:id="@+id/amountValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:gravity="center"
+        android:text="200 Rs"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/amountTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/amountTextView"
+        app:layout_constraintTop_toTopOf="@+id/amountTextView"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:text="Select the amount"
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>

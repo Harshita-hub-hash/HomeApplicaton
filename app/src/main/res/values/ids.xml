@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="clickGreen" type="id" />
+    <item name="clickVoilet" type="id" />
+    <item name="clickRed" type="id" />
+</resources>

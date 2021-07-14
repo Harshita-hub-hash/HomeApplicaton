@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">HomeApplication</string>
+    <string name="tab_text_1">Game</string>
+    <string name="tab_text_2">Profile</string>
+    <string name="tab_text_3">Records</string>
+    <string name="_500_rs">500 Rs</string>
+    <string name="select_color">Select Color :</string>
+    <string name="green">Green</string>
+    <string name="select_number">Select Number :</string>
+</resources>
